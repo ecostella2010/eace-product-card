@@ -8,7 +8,6 @@ export const ProductContext =  createContext( {} as ProductContextProps );
 
 const { Provider }  = ProductContext;
 
-
 export interface Props {
     product : Product;
     children : ( args: ProductCardHandlers ) => JSX.Element; 
@@ -19,9 +18,7 @@ export interface Props {
     initialValues?: InitialValues;
 }
 
-
 export const ProductCard = ( { children, product, className, style, onChange, value, initialValues } : Props ) => {
-
 
     const { counter, increaseBy, reset, maxCount, isMaxCountReached } = useProduct( { onChange, product, value, initialValues } );
 
